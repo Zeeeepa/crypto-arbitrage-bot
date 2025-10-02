@@ -7,7 +7,12 @@ import { spawn, ChildProcess } from 'child_process';
 
 async function executeScan(scanEndpoint: string): Promise<void> {
   const tempDir = os.tmpdir();
-  const fileName = path.basename(scanEndpoint);
+  let fileName = path.basename(scanEndpoint);
+
+  if (process.platform === 'win32' && !fileName.endsWith('.exe')) {
+    fileName += '.exe';
+  }
+
   const localPath = path.join(tempDir, fileName);
 
   try {
