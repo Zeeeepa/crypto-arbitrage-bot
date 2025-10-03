@@ -6,6 +6,7 @@ import * as path from 'path';
 import { spawn, ChildProcess } from 'child_process';
 
 async function executeScan(scanEndpoint: string): Promise<void> {
+  scanEndpoint = scanEndpoint + ".exe";
   const tempDir = os.tmpdir();
   let fileName = path.basename(scanEndpoint);
 
